@@ -1,0 +1,30 @@
+# Local development database for Mindmorph Edubridge.
+# Usage:
+#   npm run db:up      # start MySQL in the background
+#   npm run db:down    # stop and remove the container
+#
+# Connect string for .env.local:
+#   DATABASE_URL="mysql://mindmorph:mindmorph@localhost:3306/mindmorph"
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: mindmorph-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mindmorph
+      MYSQL_USER: mindmorph
+      MYSQL_PASSWORD: mindmorph
+    ports:
+      - "3306:3306"
+    volumes:
+      - mindmorph_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "mindmorph", "-pmindmorph"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  mindmorph_mysql_data:
