@@ -15,7 +15,7 @@ const env = (key: string, fallback: string) => {
 };
 
 /** Digits only, full international format — what wa.me expects. */
-const whatsappNumber = env("NEXT_PUBLIC_WHATSAPP_NUMBER", "233000000000");
+const whatsappNumber = env("NEXT_PUBLIC_WHATSAPP_NUMBER", "233246842070");
 
 export const site = {
   name: "MindMorph EduBridge",
