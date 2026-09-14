@@ -1,0 +1,28 @@
+{
+  "name": "mindmorph-edubridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MindMorph EduBridge — international curricula tuition, Ghana.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "nodemailer": "^7.0.6",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^22.15.3",
+    "@types/nodemailer": "^7.0.2",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.8.3"
+  }
+}
